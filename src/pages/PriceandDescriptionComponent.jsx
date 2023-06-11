@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { differenceInDays } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
 const PriceAndDescriptionComponent = ({ thePlace }) => {
   //states for booking
@@ -11,6 +12,7 @@ const PriceAndDescriptionComponent = ({ thePlace }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
+  const { user } = useContext(UserContext);
 
   let numberOfDays = 0;
   if (customerCheckIn && customerCheckOut) {
@@ -21,19 +23,29 @@ const PriceAndDescriptionComponent = ({ thePlace }) => {
   }
 
   const handleBooking = async () => {
-    const { data } = await axios.post("/bookings", {
-      place: thePlace._id,
-      customerCheckIn,
-      customerCheckOut,
-      guests,
-      name,
-      phone,
-      price: numberOfDays * thePlace.price,
-    });
-    if (data) {
-      navigate("/account/bookings/" + thePlace._id);
-    } else {
-      alert("error in booking. please try later");
+    if (!user) {
+      alert("please login first.");
+      return;
+    }
+    if (user) {
+      if (numberOfDays === 0) {
+        alert("please book the hotel for atleast 1 day");
+        return;
+      }
+      const { data } = await axios.post("/bookings", {
+        place: thePlace._id,
+        customerCheckIn,
+        customerCheckOut,
+        guests,
+        name,
+        phone,
+        price: numberOfDays * thePlace.price,
+      });
+      if (data) {
+        navigate("/account/bookings/" + thePlace._id);
+      } else {
+        alert("error in booking. please try later");
+      }
     }
   };
   return (

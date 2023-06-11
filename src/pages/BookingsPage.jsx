@@ -13,7 +13,7 @@ const BookingsPage = () => {
     <div>
       <AccountPageNav />
 
-      {allBookings?.length > 0 &&
+      {allBookings?.length > 0 ? (
         allBookings.map((booking) => {
           return (
             <Link
@@ -48,7 +48,12 @@ const BookingsPage = () => {
               </div>
             </Link>
           );
-        })}
+        })
+      ) : (
+        <h1 className="container bg-secondary-subtle p-2 rounded-3 my-3 overflow-hidden">
+          You don't have any bookings yet!
+        </h1>
+      )}
     </div>
   );
 };

@@ -48,7 +48,7 @@ const AddPlace = () => {
       <AccountPageNav />
       <form
         onSubmit={formSubmit}
-        className="px-5 w-75 mx-auto border border-success rounded-3"
+        className="px-4 w-75 mx-auto border border-success rounded-3"
       >
         <h5 className="mb-0 mt-3">Title</h5>
         <p className="my-0 text-body-tertiary">
