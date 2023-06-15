@@ -25,6 +25,7 @@ const PriceAndDescriptionComponent = ({ thePlace }) => {
   const handleBooking = async () => {
     if (!user) {
       alert("please login first.");
+      navigate("/login");
       return;
     }
     if (user) {
