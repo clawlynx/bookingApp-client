@@ -69,7 +69,7 @@ const UploadPhotos = ({ photos, onChange }) => {
                 <img
                   className="uploadedimg rounded-3"
                   src={
-                    "https://bookingapp-api-a2nk.onrender.com/uploads/" + photo
+                    "https://bookingapp-api-780h.onrender.com/uploads/" + photo
                   }
                   alt="image"
                 />

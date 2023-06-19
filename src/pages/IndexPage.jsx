@@ -22,7 +22,7 @@ const IndexPage = () => {
               <img
                 className="card-img-top overflow-hidden"
                 src={
-                  "https://bookingapp-api-a2nk.onrender.com/uploads/" +
+                  "https://bookingapp-api-780h.onrender.com/uploads/" +
                   place.photos[0]
                 }
                 alt="photo"

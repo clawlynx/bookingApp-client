@@ -33,7 +33,7 @@ const SinglePlace = () => {
                 <img
                   className="w-100 p-3"
                   src={
-                    "https://bookingapp-api-a2nk.onrender.com/uploads/" + photo
+                    "https://bookingapp-api-780h.onrender.com/uploads/" + photo
                   }
                 ></img>
               </div>
@@ -73,7 +73,7 @@ const SinglePlace = () => {
           {thePlace.photos?.[0] && (
             <img
               src={
-                "https://bookingapp-api-a2nk.onrender.com/uploads/" +
+                "https://bookingapp-api-780h.onrender.com/uploads/" +
                 thePlace.photos[0]
               }
               alt="img1"
@@ -84,7 +84,7 @@ const SinglePlace = () => {
           {thePlace.photos?.[1] && (
             <img
               src={
-                "https://bookingapp-api-a2nk.onrender.com/uploads/" +
+                "https://bookingapp-api-780h.onrender.com/uploads/" +
                 thePlace.photos[1]
               }
               alt="img2"
@@ -95,7 +95,7 @@ const SinglePlace = () => {
           {thePlace.photos?.[2] && (
             <img
               src={
-                "https://bookingapp-api-a2nk.onrender.com/uploads/" +
+                "https://bookingapp-api-780h.onrender.com/uploads/" +
                 thePlace.photos[2]
               }
               alt="img3"

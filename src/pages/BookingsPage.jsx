@@ -26,7 +26,7 @@ const BookingsPage = () => {
                   <img
                     className="bookingpage-photo"
                     src={
-                      "https://bookingapp-api-a2nk.onrender.com/uploads/" +
+                      "https://bookingapp-api-780h.onrender.com/uploads/" +
                       booking.place.photos[0]
                     }
                     alt="img"

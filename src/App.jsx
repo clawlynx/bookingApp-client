@@ -13,7 +13,7 @@ import SinglePlace from "./pages/SinglePlace";
 import BookingsPage from "./pages/BookingsPage";
 import BookingSinglePage from "./pages/BookingSinglePage";
 import SearchedPage from "./pages/SearchedPage";
-axios.defaults.baseURL = "https://bookingapp-api-a2nk.onrender.com";
+axios.defaults.baseURL = "https://bookingapp-api-780h.onrender.com";
 axios.defaults.withCredentials = true; //for using jwt with axios
 
 function App() {

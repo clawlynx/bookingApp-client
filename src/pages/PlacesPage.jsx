@@ -49,7 +49,7 @@ const PlacesPage = () => {
                       <img
                         className="placelist-imgicon"
                         src={
-                          "https://bookingapp-api-a2nk.onrender.com/uploads/" +
+                          "https://bookingapp-api-780h.onrender.com/uploads/" +
                           place.photos[0]
                         }
                       />
